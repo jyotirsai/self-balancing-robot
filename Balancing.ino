@@ -47,10 +47,6 @@ float PID(float measured){
    sumErr += error*deltaTime;
    dErr = (error-prevErr)/deltaTime;
 
-   if (sumErr > 255) {
-    sumErr = 255;
-   }
-
    // pid calc
    pid = Kp*error+Ki*sumErr-Kd*dErr;
 
